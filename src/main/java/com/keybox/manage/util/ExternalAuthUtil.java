@@ -48,7 +48,7 @@ public class ExternalAuthUtil {
 
     static {
         if(externalAuthEnabled) {
-            System.setProperty("java.security.auth.login.config", ExternalAuthUtil.class.getClassLoader().getResource(".").getPath() + JAAS_CONF);
+            System.setProperty("java.security.auth.login.config", ExternalAuthUtil.class.getClassLoader().getResource("").getPath() + JAAS_CONF);
         }
     }
 

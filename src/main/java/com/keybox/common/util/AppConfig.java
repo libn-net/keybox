@@ -17,9 +17,11 @@ package com.keybox.common.util;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.lang3.StringUtils;
-import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Utility to look up configurable commands and resources
@@ -31,7 +33,7 @@ public class AppConfig {
 
     static {
         try {
-            prop = new PropertiesConfiguration(AppConfig.class.getClassLoader().getResource(".").getPath() + "/KeyBoxConfig.properties");
+            prop = new PropertiesConfiguration(AppConfig.class.getClassLoader().getResource("").getPath() + "/KeyBoxConfig.properties");
         } catch (Exception ex) {
             log.error(ex.toString(), ex);
         }
